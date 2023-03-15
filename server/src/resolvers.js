@@ -6,8 +6,14 @@ const resolvers = {
             return dataSources.trackAPI.getTracksForHome();
         },
 
+        // get a single task by ID, for the task detail page
         track: (_, {id}, {dataSources}) => {
             return dataSources.trackAPI.getTrack(id)
+        },
+
+        // get a single module by ID, for the module detail page
+        module: (_, {id}, {dataSources}) => {
+            return dataSources.trackAPI.getModule(id)
         }
     },
     Track: {
